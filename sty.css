@@ -1,0 +1,2525 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
+.astra_systm {
+  transform-style: preserve-3d;
+  pointer-events: none;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body .astra_systm .star, body input[type=radio][name=star]::after, body .overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+body .astra_systm .star {
+  height: 1200px;
+  width: 1200px;
+  border-radius: 600px;
+  background: red;
+  transition: transform 2.8s 0.23s cubic-bezier(0.33, 0, 0, 1), opacity 2s 0.8s, box-shadow 0s 0s;
+  background-size: 1140px 910px;
+  top: auto;
+  bottom: -920px;
+}
+@-webkit-keyframes star {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1000px;
+  }
+}
+@keyframes star {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1000px;
+  }
+}
+
+body .astra {
+  position: absolute;
+  transform: rotatex(-20deg);
+  perspective: 800px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+body input[type=radio][name=star]::after {
+  width: 220px;
+  height: 220px;
+  border-radius: 550px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 12;
+  left: 18px;
+  bottom: 282px;
+}
+
+body {
+  overflow: hidden;
+  background: black;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+body .logo {
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 4px;
+}
+body .logo span {
+  font-size: 12px;
+  color: #f39041;
+  display: block;
+}
+body label {
+  cursor: pointer;
+}
+body label.confidential > .preview {
+  background: url("pics/T1.png");
+}
+body label.binary > .preview {
+  background: url("pics/T2.png");
+}
+body label.zeno > .preview {
+  background: url("pics/T3.png");
+}
+body label.omegix > .preview {
+  background: url("pics/T4.png");
+}
+body label.preon > .preview {
+  background: url("pics/T5.png");
+}
+body label.vega > .preview {
+  background: url("pics/T6.png");
+}
+body label.planck > .preview {
+  background: url("pics/T7.png");
+}
+body label.quark > .preview {
+  background: url("pics/T8.png");
+}
+body label.boson > .preview {
+  background: url("pics/T9.png");
+}
+body label.solari > .preview {
+  background: url("pics/T10.png");
+}
+body label.asta > .preview {
+  background: url("pics/T11.png");
+}
+body label.menu {
+  color: white;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  left: 90px;
+  z-index: 2;
+}
+body label.menu:after {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 60px;
+  content: "";
+  z-index: 2;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
+body label.menu:hover h2,
+body label.menu:hover h3 {
+  opacity: 1;
+}
+body label.menu.confidential h2 .pip {
+  background: grey;
+}
+body label.menu.binary h2 .pip {
+  background: #a23ee6;
+}
+body label.menu.zeno h2 .pip {
+  background: #e5c1f5;
+}
+body label.menu.omegix h2 .pip {
+  background: #37d0de;
+}
+body label.menu.preon h2 .pip {
+  background: #96a5e3;
+}
+body label.menu.vega h2 .pip {
+  background: #aaed02;
+}
+body label.menu.planck h2 .pip {
+  background: #02ed97;
+}
+body label.menu.quark h2 .pip {
+  background: #029fed;
+}
+body label.menu.boson h2 .pip {
+  background: #ede102;
+}
+body label.menu.solari h2 .pip {
+  background: orange;
+}
+body label.menu.asta h2 .pip {
+  background: #ed2d02;
+}
+body label.menu .preview {
+  width: 30px;
+  height: 30px;
+  background: yellow;
+  float: left;
+  background-size: auto 100%;
+  position: absolute;
+  border-radius: 100px;
+  box-shadow: 0 -13px 10px 2px black inset;
+}
+body label.menu .info {
+  position: relative;
+  left: 50px;
+  top: 1px;
+}
+body label.menu h2,
+body label.menu h3 {
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+body label.menu h2 {
+  font-size: 11px;
+  opacity: 0.4;
+  margin-bottom: 4px;
+}
+body label.menu h2 .pip {
+  width: 0;
+  height: 9px;
+  background: #fea082;
+  float: left;
+  position: relative;
+  top: 3px;
+  transition: all 0.3s;
+  margin-right: 0px;
+}
+body label.menu h3 {
+  font-size: 8px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  opacity: 0.3;
+}
+body label.menu:nth-of-type(1) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 1) +
+                        0px -
+                        451px
+                );
+}
+body label.menu:nth-of-type(2) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 2) +
+                        0px -
+                        451px
+                );
+}
+body label.menu:nth-of-type(3) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 3) +
+                        0px -
+                        451px
+                );
+}
+body label.menu:nth-of-type(4) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 4) +
+                        0px -
+                        451px
+                );
+}
+body label.menu:nth-of-type(5) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 5) +
+                        0px -
+                        451px
+                );
+}
+body label.menu:nth-of-type(6) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 6) +
+                        0px -
+                        451px
+                );
+}
+body label.menu:nth-of-type(7) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 7) +
+                        0px -
+                        451px
+                );
+}
+body label.menu:nth-of-type(8) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 8) +
+                        0px -
+                        451px
+                );
+}
+body label.menu:nth-of-type(9) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 9) +
+                        0px -
+                        451px
+                );
+}
+body label.menu:nth-of-type(10) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 10) +
+                        0px -
+                        451px
+                );
+}
+body label.menu:nth-of-type(11) {
+  top: calc(
+                    50vh +
+                        100px +
+                        ((14px + 34px) * 11) +
+                        0px -
+                        451px
+                );
+}
+body input.read {
+  display: none;
+}
+body .read:checked + label + input + .panel {
+  right: 0;
+}
+body .read:checked + label {
+  width: calc(100% - 420px);
+}
+body .read:checked + label::after {
+  opacity: 1;
+  left: 0;
+}
+body .read:checked + label + label {
+  transition: all 0.3s 0.6s;
+  opacity: 1;
+}
+body .read:not(:checked) + label + label {
+  transition: all 0.3s 0s;
+  opacity: 0;
+}
+body label.close {
+  position: absolute;
+  right: 60px;
+  opacity: 0;
+  transition: all 0.3s 0.4s;
+  z-index: 3;
+  top: 65px;
+}
+body label.closeBig {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 100vh;
+  transition: all 0.2s;
+  z-index: 10;
+  width: 0;
+  background: rgba(56, 37, 99, 0.38);
+}
+body label.closeBig::after {
+  content: "Back";
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  left: -140px;
+  opacity: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .overlay {
+  border-bottom: 1020px solid black;
+  width: 1800px;
+  height: 620px;
+  top: auto;
+  transform: none;
+  top: -240px;
+  left: -303px;
+  opacity: 1;
+  border-radius: 100%;
+  z-index: 0;
+  box-shadow: 0px -190px 215px 110px black inset;
+  display: none;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star1:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star1:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(1) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(1) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(1) .star_description h2,
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(1) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(1) .star_description p,
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(1) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(1) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 1;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(-4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 0;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(-6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -1;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(-9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -2;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(-11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -3;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(-13800px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -4;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(-16100px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -5;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(-18400px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -6;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(-20700px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -7;
+}
+body input[type=radio][name=star].star1:checked + label + div .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(-23000px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -8;
+}
+body input[type=radio][name=star].star1:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star1:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star1:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star1:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star1:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star1:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star1:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star1:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star1:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star1:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star1:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star1:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star1:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star1:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star1:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star1:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star2:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star2:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(2) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 3;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(2) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(2) .star_description h2,
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(2) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(2) .star_description p,
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(2) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(2) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 1;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(-4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 0;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(-6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -1;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(-9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -2;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(-11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -3;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(-13800px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -4;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(-16100px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -5;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(-18400px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -6;
+}
+body input[type=radio][name=star].star2:checked + label + input + label + div .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(-20700px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -7;
+}
+body input[type=radio][name=star].star2:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star2:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star2:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star2:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star2:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star2:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star2:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star2:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star2:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star2:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star2:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star2:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star2:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star2:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star2:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star2:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star3:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star3:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(3) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 4;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 3;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star_description h2,
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star_description p,
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 1;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(-4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 0;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(-6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -1;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(-9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -2;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(-11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -3;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(-13800px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -4;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(-16100px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -5;
+}
+body input[type=radio][name=star].star3:checked + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(-18400px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -6;
+}
+body input[type=radio][name=star].star3:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star3:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star3:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star3:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star3:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star3:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star3:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star3:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star3:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star3:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star3:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star3:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star3:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star3:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star3:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star3:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star4:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star4:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 5;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 4;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 3;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star_description h2,
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star_description p,
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 1;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(-4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 0;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(-6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -1;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(-9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -2;
+}
+body input[type=radio][name=star].star4:checked + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(-11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -3;
+}
+
+body input[type=radio][name=star].star4:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star4:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star4:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star4:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star4:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star4:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star4:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star4:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star4:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star4:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star4:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star4:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star4:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star4:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star4:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star4:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star5:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star5:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 6;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 5;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 4;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 3;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star_description h2,
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star_description p,
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 1;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(-4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 0;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(-6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -1;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(-9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -2;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(-11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -3;
+}
+body input[type=radio][name=star].star5:checked + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(-13800px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -4;
+}
+body input[type=radio][name=star].star5:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star5:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star5:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star5:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star5:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star5:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star5:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star5:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star5:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star5:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star5:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star5:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star5:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star5:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star5:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star5:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star6:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star6:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 7;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 6;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 5;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 4;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 3;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star_description h2,
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star_description p,
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 1;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(-4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 0;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(-6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -1;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(-9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -2;
+}
+body input[type=radio][name=star].star6:checked + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(-11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -3;
+}
+body input[type=radio][name=star].star6:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star6:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star6:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star6:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star6:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star6:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star6:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star6:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star6:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star6:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star6:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star6:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star6:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star6:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star6:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star6:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star7:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star7:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(13800px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 8;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 7;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 6;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 5;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 4;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 3;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star_description h2,
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star_description p,
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 1;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(-4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 0;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(-6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -1;
+}
+body input[type=radio][name=star].star7:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(-9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -2;
+}
+body input[type=radio][name=star].star7:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star7:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star7:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star7:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star7:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star7:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star7:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star7:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star7:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star7:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star7:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star7:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star7:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star7:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star7:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star7:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star8:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star8:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(16100px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 9;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(13800px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 8;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 7;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 6;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 5;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 4;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 3;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star_description h2,
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star_description p,
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 1;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(-4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 0;
+}
+body input[type=radio][name=star].star8:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(-6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: -1;
+}
+body input[type=radio][name=star].star8:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star8:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star8:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star8:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star8:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star8:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star8:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star8:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star8:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star8:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star8:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star8:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star8:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star8:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star8:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star8:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star9:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star9:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(18400px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 10;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(16100px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 9;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(13800px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 8;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 7;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 6;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 5;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 4;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 3;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star_description h2,
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star_description p,
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 1;
+}
+body input[type=radio][name=star].star9:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(-4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 0;
+}
+body input[type=radio][name=star].star9:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star9:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star9:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star9:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star9:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star9:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star9:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star9:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star9:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star9:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star9:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star9:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star9:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star9:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star9:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star9:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star10:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(20700px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 11;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(18400px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 10;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(16100px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 9;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(13800px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 8;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 7;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 6;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 5;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 4;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 3;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star_description h2,
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star_description p,
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star10:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 1;
+}
+body input[type=radio][name=star].star10:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star10:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star10:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star10:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star10:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star10:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star10:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star10:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star10:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star10:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star10:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star10:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star10:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star10:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star10:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star10:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body input[type=radio][name=star] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body input[type=radio][name=star]::after {
+  content: "";
+}
+body input[type=radio][name=star].star11:checked::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input::after {
+  display: none;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) {
+  pointer-events: all;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(23000px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 12;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(20700px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 11;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(18400px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 10;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(16100px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 9;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(13800px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 8;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(11500px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 7;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(9200px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 6;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(6900px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 5;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(4600px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 4;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(2300px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 3;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scaleX(0.89);
+  opacity: 2;
+  -webkit-animation: star 60s 3.9s infinite linear;
+          animation: star 60s 3.9s infinite linear;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star_description {
+  opacity: 1;
+  transition: all 0.6s 2.6s;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star_description h2,
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star_description h1 {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s 3s;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star_description p,
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star_description a {
+  transition: all 1s 3.5s, padding 0.3s 0s;
+  opacity: 1;
+}
+body input[type=radio][name=star].star11:checked + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + input + label + div .astra_systm:nth-of-type(11) .star .overlay {
+  opacity: 1;
+  top: -240px;
+}
+body input[type=radio][name=star].star11:checked + label.confidential > .info h3 {
+  color: grey;
+}
+body input[type=radio][name=star].star11:checked + label.binary > .info h3 {
+  color: #a23ee6;
+}
+body input[type=radio][name=star].star11:checked + label.zeno > .info h3 {
+  color: #e5c1f5;
+}
+body input[type=radio][name=star].star11:checked + label.omegix > .info h3 {
+  color: #37d0de;
+}
+body input[type=radio][name=star].star11:checked + label.preon > .info h3 {
+  color: #96a5e3;
+}
+body input[type=radio][name=star].star11:checked + label.vega > .info h3 {
+  color: #aaed02;
+}
+body input[type=radio][name=star].star11:checked + label.planck > .info h3 {
+  color: #02ed97;
+}
+body input[type=radio][name=star].star11:checked + label.quark > .info h3 {
+  color: #029fed;
+}
+body input[type=radio][name=star].star11:checked + label.boson > .info h3 {
+  color: #ede102;
+}
+body input[type=radio][name=star].star11:checked + label.solari > .info h3 {
+  color: orange;
+}
+body input[type=radio][name=star].star11:checked + label.asta > .info h3 {
+  color: #ed2d02;
+}
+body input[type=radio][name=star].star11:checked + label {
+  opacity: 1;
+}
+body input[type=radio][name=star].star11:checked + label:before {
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  background: white;
+  border-radius: 4px;
+  content: "";
+}
+body input[type=radio][name=star].star11:checked + label > .info h2 {
+  opacity: 1;
+}
+body input[type=radio][name=star].star11:checked + label > .info h2 .pip {
+  width: 30px;
+  margin-right: 6px;
+}
+body input[type=radio][name=star].star11:checked + label > .info h3 {
+  opacity: 1;
+  color: #fea082;
+}
+body .astra_systm:nth-of-type(1) .star {
+  transform: translateZ(0px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: 2;
+}
+body .astra_systm:nth-of-type(1) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(1) .star_description p,
+body .astra_systm:nth-of-type(1) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(1) .star_description h1,
+body .astra_systm:nth-of-type(1) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm:nth-of-type(2) .star {
+  transform: translateZ(-2300px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(2) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(2) .star_description p,
+body .astra_systm:nth-of-type(2) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(2) .star_description h1,
+body .astra_systm:nth-of-type(2) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm:nth-of-type(3) .star {
+  transform: translateZ(-4600px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(3) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(3) .star_description p,
+body .astra_systm:nth-of-type(3) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(3) .star_description h1,
+body .astra_systm:nth-of-type(3) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm:nth-of-type(4) .star {
+  transform: translateZ(-6900px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: -1;
+}
+body .astra_systm:nth-of-type(4) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(4) .star_description p,
+body .astra_systm:nth-of-type(4) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(4) .star_description h1,
+body .astra_systm:nth-of-type(4) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm:nth-of-type(5) .star {
+  transform: translateZ(-9200px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: -2;
+}
+body .astra_systm:nth-of-type(5) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(5) .star_description p,
+body .astra_systm:nth-of-type(5) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(5) .star_description h1,
+body .astra_systm:nth-of-type(5) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm:nth-of-type(6) .star {
+  transform: translateZ(-11500px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: -3;
+}
+body .astra_systm:nth-of-type(6) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(6) .star_description p,
+body .astra_systm:nth-of-type(6) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(6) .star_description h1,
+body .astra_systm:nth-of-type(6) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm:nth-of-type(7) .star {
+  transform: translateZ(-13800px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: -4;
+}
+body .astra_systm:nth-of-type(7) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(7) .star_description p,
+body .astra_systm:nth-of-type(7) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(7) .star_description h1,
+body .astra_systm:nth-of-type(7) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm:nth-of-type(8) .star {
+  transform: translateZ(-16100px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: -5;
+}
+body .astra_systm:nth-of-type(8) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(8) .star_description p,
+body .astra_systm:nth-of-type(8) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(8) .star_description h1,
+body .astra_systm:nth-of-type(8) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm:nth-of-type(9) .star {
+  transform: translateZ(-18400px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: -6;
+}
+body .astra_systm:nth-of-type(9) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(9) .star_description p,
+body .astra_systm:nth-of-type(9) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(9) .star_description h1,
+body .astra_systm:nth-of-type(9) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm:nth-of-type(10) .star {
+  transform: translateZ(-20700px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: -7;
+}
+body .astra_systm:nth-of-type(10) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(10) .star_description p,
+body .astra_systm:nth-of-type(10) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(10) .star_description h1,
+body .astra_systm:nth-of-type(10) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm:nth-of-type(11) .star {
+  transform: translateZ(-23000px) translateY(0) rotatex(4deg) scalex(0.89);
+  opacity: -8;
+}
+body .astra_systm:nth-of-type(11) .star_description {
+  opacity: 1;
+}
+body .astra_systm:nth-of-type(11) .star_description p,
+body .astra_systm:nth-of-type(11) .star_description a {
+  opacity: 0;
+}
+body .astra_systm:nth-of-type(11) .star_description h1,
+body .astra_systm:nth-of-type(11) .star_description h2 {
+  position: relative;
+  top: -330px;
+  transition: all 0.5s 0s;
+}
+body .astra_systm .star.confidential {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pics/T1.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star.binary {
+  background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pics/T2.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star.zeno {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("pics/T3.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star.omegix {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("pics/T4.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star.preon {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pics/T5.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star.vega {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("pics/T6.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star.planck {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("pics/T7.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star.quark {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("pics/T8.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star.boson {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("pics/T9.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star.solari {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pics/T10.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star.asta {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("pics/T11.png");
+  box-shadow: 0 -590px 150px black inset, 0 0px 130px 40px #ffcb9c inset, 0 0px 23px 4px #ffcb9c inset, 0 -10px 130px #b85a07;
+}
+body .astra_systm .star_description {
+  width: 620px;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  z-index: 2;
+  right: 0;
+  color: white;
+  font-weight: 100;
+  transition: all 0.4s 0s;
+  text-transform: uppercase;
+  z-index: 1;
+}
+body .astra_systm .star_description.confidential a {
+  color: grey;
+}
+body .astra_systm .star_description.confidential h2 {
+  color: #b3b3b3;
+}
+body .astra_systm .star_description.binary a {
+  color: #a23ee6;
+}
+body .astra_systm .star_description.binary h2 {
+  color: #ce98f2;
+}
+body .astra_systm .star_description.zeno a {
+  color: #e5c1f5;
+}
+body .astra_systm .star_description.zeno h2 {
+  color: white;
+}
+body .astra_systm .star_description.omegix a {
+  color: #37d0de;
+}
+body .astra_systm .star_description.omegix h2 {
+  color: #8fe5ec;
+}
+body .astra_systm .star_description.preon a {
+  color: #96a5e3;
+}
+body .astra_systm .star_description.preon h2 {
+  color: #e7eaf8;
+}
+body .astra_systm .star_description.vega a {
+  color: #aaed02;
+}
+body .astra_systm .star_description.vega h2 {
+  color: #cefe57;
+}
+body .astra_systm .star_description.planck a {
+  color: #02ed97;
+}
+body .astra_systm .star_description.planck h2 {
+  color: #57fec1;
+}
+body .astra_systm .star_description.quark a {
+  color: #029fed;
+}
+body .astra_systm .star_description.quark h2 {
+  color: #57c6fe;
+}
+body .astra_systm .star_description.boson a {
+  color: #ede102;
+}
+body .astra_systm .star_description.boson h2 {
+  color: #fef557;
+}
+body .astra_systm .star_description h1,
+body .astra_systm .star_description h2,
+body .astra_systm .star_description p,
+body .astra_systm .star_description a {
+  font-weight: 100;
+  font-size: 10px;
+  letter-spacing: 5px;
+  margin: 0;
+}
+body .astra_systm .star_description h1 {
+  letter-spacing: 16px;
+  font-size: 34px;
+}
+body .astra_systm .star_description h2,
+body .astra_systm .star_description a {
+  color: #fabfad;
+}
+body .astra_systm .star_description h2 {
+  margin-top: 60px;
+  margin-bottom: 6px;
+}
+body .astra_systm .star_description p {
+  line-height: 26px;
+  margin-top: 14px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+body .astra_systm .star_description a {
+  color: #fea082;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 0 2px 5px 0px;
+  border-bottom: 2px solid;
+  transition: all 0.2s;
+  position: relative;
+  left: 0;
+}
+body .astra_systm .star_description a:hover {
+  padding: 0 10px 5px 10px;
+  left: -1px;
+}
+body .astra_systm .star_description a span {
+  letter-spacing: 0;
+  margin-left: -5px;
+}
+body .panel {
+  position: absolute;
+  right: -520px;
+  width: 300px;
+  top: 0;
+  height: 100vh;
+  transition: all 0.2s;
+  color: black;
+  background: white;
+  padding: 10px 60px 0px 60px;
+  overflow: scroll;
+}
+body .panel body::-webkit-scrollbar {
+  width: 1em;
+}
+body .panel body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+body .panel .profile {
+  padding-top: 4px;
+}
+body .panel .profile p {
+  line-height: 10px;
+}
+body .panel .profile p span {
+  font-weight: 600;
+  color: black;
+}
+body .panel img {
+  border-radius: 2px;
+  width: 100%;
+}
+body .panel h1 {
+  text-transform: uppercase;
+  font-weight: 100;
+  margin: 0 0 0 0;
+  letter-spacing: 3px;
+  top: 0;
+  padding: 49px 0 0 0;
+  width: 100%;
+  font-size: 20px;
+}
+body .panel h1::after {
+  width: 30px;
+  height: 2px;
+  background: black;
+  display: block;
+  content: "";
+  margin-bottom: 30px;
+  margin-top: 8px;
+}
+body .panel h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 30px;
+}
+body .panel h2::after {
+  width: 30px;
+  height: 2px;
+  background: black;
+  display: block;
+  content: "";
+  margin-top: 8px;
+}
+body .panel p {
+  color: #a0a0a0;
+  font-size: 12px;
+  line-height: 20px;
+}/*# sourceMappingURL=sty.css.map */
